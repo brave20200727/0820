@@ -7,5 +7,6 @@
 </head>
 <body>
     <H1>Hello! <?= $data->name ?></H1>
+    <img src="/0820/EasyMVC/image/keyboard.jpg" alt="?">
 </body>
 </html>
