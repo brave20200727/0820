@@ -19,8 +19,12 @@ $doc = new DOMDocument();
 libxml_use_internal_errors(true);
 $doc->loadHTML($pageContent);
 
+// var_dump($doc);
 $xpath = new DOMXPath($doc);
-$entries = $xpath->query('/html/body/form/div[5]/div[3]/div[2]/div/div[3]/div[1]/div[2]/ul');
+// $entries = $xpath->query('//*[@id="news_box3"]/div[2]/ul/li');
+$entries = $xpath->query("/html/body/form/div/div/div/div/div/div/div/ul/li");
+// /html/body/form/div[5]/div[3]/div[2]/div/div[3]/div[1]/div[2]/ul/li[1]
+// var_dump($entries);
 foreach ($entries as $entry) 
 {
     $title = $xpath->query("./a/div/h3", $entry);
